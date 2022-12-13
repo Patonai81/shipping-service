@@ -27,7 +27,8 @@ public class ShippingService {
     @Async
     public void shipOrder(ShippingOrderDTO shippingOrderDTO, String generatedId) {
         log.info("Thread name controller: " + Thread.currentThread().getName());
-        log.info("ASYNC method");
+        log.info("ASYNC method INPUT:");
+        log.info(shippingOrderDTO.toString());
         try {
             Thread.sleep(10000);
             pushResponse(generatedId);
